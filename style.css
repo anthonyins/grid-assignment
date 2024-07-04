@@ -1,3 +1,8 @@
+:root {
+  --turkey-red: #e30a17;
+  --turkey-white: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +12,18 @@
 }
 
 body {
-  background-color: darkblue;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(227, 10, 23, 1) 100%
+  );
 }
 
 .header {
   text-align: center;
   margin: 1rem auto;
-  color: yellow;
-  & span {
-    color: yellow;
-  }
+  color: var(--turkey-white);
 }
 .container {
   width: 90%;
@@ -78,8 +85,10 @@ body {
     letter-spacing: 0.05em;
     margin: 2em 0 0 0;
   }
-  & img {
+  & img,
+  iframe {
     height: 300px;
+    object-fit: cover;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
